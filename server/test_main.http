@@ -1,0 +1,58 @@
+###
+POST http://127.0.0.1:8000/signup
+Content-Type: application/json
+
+{"email": "login4ak@gmail.com"}
+###
+
+POST http://127.0.0.1:8000/verify
+Content-Type: application/json
+
+{
+  "email": "login4ak@gmail.com",
+  "value": "8374",
+  "name": "Akshay",
+  "pin": "123456"
+}
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: application/json
+
+{"email":  "login4ak@gmail.com", "pin":  123456}
+###
+
+POST http://127.0.0.1:8000/pot
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvZ2luNGFrQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM5MzE5N30.wq70aeexiUfVilEPUGNysPbXv5ueAKAfwNTEuekfXug
+
+{"goal": "Buy new Cam", "target": 55000, "targetDate": "2024-06-16"}
+###
+
+POST http://127.0.0.1:8000/pot/lock
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvZ2luNGFrQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM5MzE5N30.wq70aeexiUfVilEPUGNysPbXv5ueAKAfwNTEuekfXug
+
+{"id": 10}
+###
+
+POST http://127.0.0.1:8000/pot/unlock
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvZ2luNGFrQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM5MzE5N30.wq70aeexiUfVilEPUGNysPbXv5ueAKAfwNTEuekfXug
+
+{"id": 10}
+###
+
+POST http://127.0.0.1:8000/transaction/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvZ2luNGFrQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM5MzE5N30.wq70aeexiUfVilEPUGNysPbXv5ueAKAfwNTEuekfXug
+
+{"amount": 10000, "pots": []}
+###
+
+POST http://127.0.0.1:8000/transaction/withdraw
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvZ2luNGFrQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM5MzE5N30.wq70aeexiUfVilEPUGNysPbXv5ueAKAfwNTEuekfXug
+
+{"amount": 100000, "pots": [15]}
+###
